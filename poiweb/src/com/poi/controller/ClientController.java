@@ -127,6 +127,7 @@ public class ClientController {
 			//获取第一个sheet页 
 			HSSFSheet sheet = wb.getSheetAt(0);
 			if(sheet!=null){
+				//循环操作sheet中的数据，依次取出每行每列的数据保存到List对应的数据中
 				for(int rowNum =1;rowNum<=sheet.getLastRowNum();rowNum++){
 					HSSFRow row = sheet.getRow(rowNum);
 					if(row==null){
